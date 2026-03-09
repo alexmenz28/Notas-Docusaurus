@@ -1,41 +1,53 @@
-# Website
+# Biblioteca — Sitio web
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Biblioteca personal de conocimiento construida con [Docusaurus](https://docusaurus.io/). Incluye notas sobre arquitecturas de software, bases de datos, marcos de trabajo, metodologías, paradigmas de programación, prácticas ágiles, desarrollo web y GitHub, con intención de seguir anotando mi aprendizaje.
 
-## Installation
+## Contenido
 
-```bash
-yarn
-```
+- **Ejemplos** — Guía de uso de Markdown (tablas, código, Mermaid, admonitions)
+- **Arquitecturas de desarrollo** — Monolito, n-capas, hexagonal, clean, microservicios, CQRS, SPA/SSR/SSG, micro-frontends
+- **Bases de datos** — Fundamentos, formas normales, diseño, índices, NoSQL, migraciones, SQL (DDL/DML, consultas, transacciones, procedimientos/triggers/funciones)
+- **Marcos de trabajo** — Scrum, PUDS
+- **Metodologías** — XP
+- **Paradigmas (POO)** — Fundamentos, SOLID, relaciones UML, patrones, POO en C#/TypeScript
+- **Prácticas ágiles** — Historias de usuario, Planning poker
+- **Desarrollo web** — Diagramas y stacks (frontend, backend, datos, despliegue)
+- **GitHub** — Fundamentos, repositorios, ramas y commits, pull requests, issues, Actions
 
-## Local Development
+## Requisitos
 
-```bash
-yarn start
-```
+- Node.js >= 20
+- npm
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
+## Instalación
 
 ```bash
-USE_SSH=true yarn deploy
+npm install
 ```
 
-Not using SSH:
+## Desarrollo local
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+npm run start
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Inicia el servidor de desarrollo. La mayoría de los cambios se reflejan en vivo sin reiniciar.
+
+## Build y vista previa de producción
+
+```bash
+npm run build
+npm run serve
+```
+
+El build genera el contenido estático en `build/`. La búsqueda local se indexa correctamente tras el build (en `start` el índice puede estar incompleto).
+
+## Despliegue
+
+Para GitHub Pages u otro hosting estático, sube el contenido de la carpeta `build/` tras ejecutar `npm run build`.
+
+## Tecnologías
+
+- [Docusaurus](https://docusaurus.io/) 3.x
+- [Mermaid](https://mermaid.js.org/) — Diagramas en Markdown
+- [docusaurus-plugin-search-local](https://github.com/cmfcmf/docusaurus-search-local) — Búsqueda local
