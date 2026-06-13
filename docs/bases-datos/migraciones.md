@@ -53,13 +53,13 @@ Sirve para **versionar el esquema** junto al código: cualquier entorno puede qu
 - No modificar migraciones ya aplicadas en producción; hacer una **nueva migración** que corrija o añada lo que haga falta.
 - En cambios destructivos (DROP column, DROP table), valorar backup y ventana de mantenimiento; a veces conviene migración en dos fases (deprecar uso, luego eliminar).
 
-## Instalación / puesta en marcha
+## Herramientas de migración (referencia)
 
 Ejemplos de herramientas (solo como referencia; **puedes usar otras**):
 
 - **Entity Framework Core (C#):** Migraciones generadas desde el modelo; `dotnet ef migrations add Nombre`, `dotnet ef database update`. [Docs](https://learn.microsoft.com/ef/core/managing-schemas/migrations/).
 - **Flyway:** Migraciones en SQL (o Java); se ejecutan en orden por versión. [Flyway](https://flywaydb.org/documentation/).
-- **TypeORM (Node/TypeScript):** Migraciones desde entidades o SQL; `typeorm migration:run`. [TypeORM Migrations](https://typeorm.io/migrations).
+- **TypeORM (Node/TypeScript):** Migraciones desde entidades o SQL; en **0.3+** se usa un `DataSource` y la CLI suele ser del tipo `npx typeorm -d ruta/al/data-source.ts migration:run` (el comando exacto depende de tu `package.json` y versión). Las versiones antiguas usaban `typeorm migration:run` global. [TypeORM Migrations](https://typeorm.io/migrations).
 - **Alembic (Python/SQLAlchemy):** Migraciones para Python. [Alembic](https://alembic.sqlalchemy.org/).
 
 Puedes anotar aquí la herramienta y el flujo que uses (por ejemplo “Flyway + Jenkins” o “EF Core en deploy”).

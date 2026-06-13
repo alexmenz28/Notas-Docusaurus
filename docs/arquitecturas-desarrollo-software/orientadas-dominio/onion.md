@@ -60,7 +60,7 @@ flowchart TB
   DOMINIO --> KERNEL[Núcleo de dominio]
 ```
 
-## Instalación / puesta en marcha
+## Stacks de ejemplo y laboratorio local
 
 Suele implementarse mediante **proyectos/módulos separados por capa**:
 

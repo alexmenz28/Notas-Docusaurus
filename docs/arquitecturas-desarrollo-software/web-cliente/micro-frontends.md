@@ -59,7 +59,7 @@ flowchart TB
   SHELL --> APP3[App C]
 ```
 
-## Instalación / puesta en marcha
+## Stacks de ejemplo y laboratorio local
 
 En la práctica se usan varias técnicas:
 

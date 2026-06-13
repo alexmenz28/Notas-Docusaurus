@@ -108,6 +108,6 @@ JOIN (SELECT usuario_id, SUM(total) AS total FROM pedidos GROUP BY usuario_id) s
 
 Cláusulas en el orden lógico de escritura: `SELECT` → `FROM` → `JOIN` → `WHERE` → `GROUP BY` → `HAVING` → `ORDER BY` → `LIMIT/OFFSET`. El SGBD optimiza; conceptualmente primero se resuelven FROM/JOIN/WHERE, luego agrupación y HAVING, luego ordenación y límite.
 
-## Instalación / puesta en marcha
+## Practicar con datos de ejemplo
 
 Mismo SGBD y clientes que en [DDL y DML](/docs/bases-datos/sql/sql-ddl-dml). Conviene tener tablas de ejemplo (usuarios, pedidos, productos) para practicar JOINs y agregaciones. Puedes anotar aquí datasets o scripts de ejemplo que uses.

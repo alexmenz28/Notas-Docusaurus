@@ -36,6 +36,8 @@ keywords:
 
 ## DDL — Crear y modificar estructura
 
+**Dialectos:** Los ejemplos mezclan sintaxis típica de **MySQL** (`AUTO_INCREMENT` en tablas) y de **PostgreSQL** (`INTERVAL '30 days'` en la vista). **SQL Server** usaría `IDENTITY` en lugar de `AUTO_INCREMENT`, y `ALTER COLUMN ... VARCHAR(...) NOT NULL` en lugar de `ALTER COLUMN ... SET NOT NULL`. Ajusta siempre identidades, `ALTER` e intervalos a tu motor.
+
 **Crear tabla:**
 
 ```sql
@@ -115,7 +117,7 @@ SELECT * FROM usuarios ORDER BY nombre ASC LIMIT 10;
 - Restricciones (PK = clave primaria, FK = clave foránea, NOT NULL, UNIQUE, CHECK) para mantener integridad en el SGBD (sistema gestor de bases de datos).
 - Nombres de tablas y columnas claros y consistentes; evitar palabras reservadas.
 
-## Instalación / puesta en marcha
+## Cliente SQL y motor para practicar
 
 Cualquier SGBD relacional incluye un motor SQL. Ejemplos de clientes (solo como referencia):
 

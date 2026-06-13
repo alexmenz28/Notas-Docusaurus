@@ -63,7 +63,7 @@ Sirve para **acelerar consultas** que filtran, ordenan o hacen JOIN por ciertas 
 - Indexar FKs y columnas usadas en filtros y JOINs frecuentes.
 - Revisar índices no usados o duplicados y eliminarlos para no ralentizar escrituras.
 
-## Instalación / puesta en marcha
+## Ejemplos de CREATE INDEX por SGBD
 
 La creación de índices es con **DDL** del SGBD que uses. Ejemplos (solo como referencia):
 

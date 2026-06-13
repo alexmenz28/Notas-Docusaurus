@@ -36,7 +36,7 @@ keywords:
 
 ## Qué es
 
-**GitHub Actions** es la plataforma de automatización de GitHub: defines workflows en YAML que se ejecutan en repos virtuales (runners) cuando ocurren eventos. Ejemplos: ejecutar tests en cada PR, build y deploy al hacer push a main, crear releases, enviar notificaciones.
+**GitHub Actions** es la plataforma de automatización de GitHub: defines workflows en YAML que se ejecutan en **runners** (máquinas virtuales hospedadas por GitHub o propias, *self-hosted*) cuando ocurren eventos. Ejemplos: ejecutar tests en cada PR, build y deploy al hacer push a main, crear releases, enviar notificaciones.
 
 ## Para qué sirve
 
@@ -69,10 +69,10 @@ jobs:
       - run: npm test
 ```
 
-- `on:**` define el evento (push a main, PR a main).
-- `jobs.test:**` un job llamado "test".
-- `runs-on: ubuntu-latest:**` ejecuta en un runner Linux.
-- `steps:**` checkout del repo, setup Node, ejecutar tests.
+- La clave `on` define cuándo se dispara el workflow (p. ej. `push` a `main`, `pull_request` a `main`).
+- `jobs` agrupa los trabajos; aquí hay un job llamado `test`.
+- `runs-on: ubuntu-latest` indica que el job corre en un runner Linux reciente.
+- `steps` lista los pasos: checkout del repo, configurar Node y ejecutar tests.
 
 **Ejemplo: deploy a Vercel tras merge en main:**
 

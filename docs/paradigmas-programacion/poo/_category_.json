@@ -1,0 +1,8 @@
+{
+  "label": "Programación orientada a objetos",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Fundamentos, SOLID, UML, patrones y POO en C# / TypeScript."
+  }
+}

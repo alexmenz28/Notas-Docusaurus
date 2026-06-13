@@ -37,7 +37,7 @@ Sirve cuando necesitas **trazabilidad total** (auditoría, compliance, “qué p
 
 ## Cómo se reconoce y cómo aplicarla
 
-- **En el código:** Por un lado, handlers de comandos que validan, crean eventos y los persisten en un event store; por otro, proyecciones o read models que consumen esos eventos y actualizan vistas (tablas, documentos) para las consultas. Las lecturas no tocan el event store; leen de las vistas.
+- **En el código:** Por un lado, handlers de comandos que validan, crean eventos y los persisten en un event store; por otro, proyecciones o read models que consumen esos eventos y actualizan vistas (tablas, documentos) para las consultas. En **producción** las lecturas suelen ir contra esas vistas o read models; el event store sigue siendo la fuente de verdad para escritura, *replay* y herramientas de diagnóstico, aunque en algunos diseños también se consulte directamente (p. ej. auditoría).
 - **En la práctica:** Un event store (EventStoreDB, Kafka con retención, o diseño propio) y disciplina de versionado de eventos (evolución del esquema sin romper replay). CQRS sin Event Sourcing es posible (solo separar comandos y consultas con modelos distintos); combinados son más potentes pero más complejos.
 
 ## Cuándo usarla
@@ -68,7 +68,7 @@ flowchart LR
   EVENTOS --> STORE[Event Store]
 ```
 
-## Instalación / puesta en marcha
+## Stacks de ejemplo y laboratorio local
 
 Suele implicar:
 

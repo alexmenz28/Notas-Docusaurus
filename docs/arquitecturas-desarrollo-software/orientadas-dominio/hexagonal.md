@@ -35,7 +35,7 @@ Sirve para **aislar las reglas de negocio** de la tecnología: puedes cambiar la
 
 - **En el código:** Carpetas o paquetes como `domain` (entidades, reglas puras), `application` o `ports` (interfaces “recibir comando”, “obtener dato”), `adapters` (implementaciones: `RestAdapter`, `PostgresAdapter`, `KafkaAdapter`). El dominio no importa nada de infraestructura; los adaptadores implementan interfaces definidas en el dominio o en una capa de aplicación.
 - **Flujo:** Una petición llega por un adaptador de entrada (p. ej. controller REST), que traduce a un caso de uso o comando del dominio; el dominio (o aplicación) usa puertos de salida (p. ej. “guardar pedido”) que un adaptador implementa contra la BD real.
-- **En la práctica:** Si el “dominio” tiene referencias a `HttpContext`, SQL o Kafka, la hexágono se está rompiendo; esas referencias deben estar solo en adaptadores.
+- **En la práctica:** Si el “dominio” tiene referencias a `HttpContext`, SQL o Kafka, **el hexágono** se está rompiendo; esas referencias deben estar solo en adaptadores.
 
 ## Cuándo usarla
 
@@ -67,15 +67,15 @@ flowchart LR
   PUERTO_OUT --> ADAPTADORES[BD, Mensajería, Servicios externos]
 ```
 
-## Instalación / puesta en marcha
+## Stacks de ejemplo y laboratorio local
 
 No existe una “instalación” estándar porque es un **estilo de organización**, pero hay guías por tecnología:
 
 - **Artículo original de Alistair Cockburn**  
-  Referencia: [“Hexagonal Architecture”](https://alistair.cockburn.us/hexagonal-architecture/).
+  Referencia: [Arquitectura hexagonal (Wikipedia)](https://es.wikipedia.org/wiki/Arquitectura_hexagonal) como resumen del enfoque; el artículo original de Cockburn a veces falla por TLS o red — búsqueda: «Hexagonal Architecture Cockburn».
 - **Ejemplos en Java / Spring**  
   - Patrones de capas `domain`, `application`, `infrastructure`, `adapters`.  
-  - Referencia: [Guías de arquitectura hexagonal con Spring Boot (Baeldung, Reflectoring, etc.)].
+  - Referencia: [Reflectoring — Hexagonal con Spring Boot](https://reflectoring.io/spring-hexagonal/); marco conceptual: [arquitectura hexagonal (Wikipedia)](https://es.wikipedia.org/wiki/Arquitectura_hexagonal).
 - **Ejemplos en Node.js / NestJS**  
   - Crear módulos `domain`, `application` y `infrastructure`, inyectando adaptadores a través de interfaces.  
   - Referencia: [NestJS - Modules & Providers](https://docs.nestjs.com/modules).

@@ -63,7 +63,7 @@ flowchart LR
   MOD2 --> DB
 ```
 
-## Instalación / puesta en marcha
+## Stacks de ejemplo y laboratorio local
 
 Ejemplos de stack (solo como referencia; **puedes usar otros**):
 

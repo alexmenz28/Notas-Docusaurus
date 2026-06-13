@@ -30,7 +30,7 @@ keywords:
 
 ## Qué es
 
-Scrum es un marco de trabajo ágil para gestionar productos complejos mediante iteraciones cortas llamadas *sprints*. Define **roles** (PO, SM, equipo de desarrollo), **eventos** (planning, daily, review, retrospectiva) y **artefactos** (backlogs, incremento) para inspeccionar y adaptar producto y proceso en ciclos cortos.
+Scrum es un marco de trabajo ágil para gestionar productos complejos mediante iteraciones cortas llamadas *sprints*. Define **roles** (Product Owner, Scrum Master y Developers), **eventos** (planning, daily, review, retrospectiva) y **artefactos** (backlogs, incremento) para inspeccionar y adaptar producto y proceso en ciclos cortos. La *Scrum Guide* (2020) habla del **Scrum Team** como unidad formada por esas tres figuras; antes se usaba mucho el término *Development Team* para el grupo que construye el incremento.
 
 ## Para qué sirve
 
@@ -44,7 +44,7 @@ Se reconoce por la presencia de sprints de duración fija, reuniones típicas (p
 
 - **Product Owner (PO)**: maximiza el valor del producto, prioriza el *Product Backlog*.
 - **Scrum Master (SM)**: facilita el marco de Scrum, elimina impedimentos, ayuda al equipo a mejorar.
-- **Development Team / Equipo de desarrollo**: personas que construyen el incremento de producto.
+- **Developers (desarrolladores):** personas del Scrum Team que crean cada incremento usable; se comprometen con el trabajo del sprint y la *Definition of Done*.
 
 ## Eventos
 
@@ -58,7 +58,7 @@ Se reconoce por la presencia de sprints de duración fija, reuniones típicas (p
 
 - **Product Backlog**: lista priorizada de todo lo que podría hacerse en el producto.
 - **Sprint Backlog**: subconjunto del Product Backlog seleccionado para el sprint.
-- **Incremento**: suma de todo el trabajo terminado en el sprint y los anteriores.
+- **Incremento:** conjunto de ítems del *Product Backlog* completados de forma que cumplen la *Definition of Done*, en un estado usable y alineado con el *Product Goal*. Suele entenderse como el producto en un estado entregable al cierre del sprint (y acumulando valor respecto a incrementos anteriores cuando el producto ya estaba en producción).
 
 ## Ejemplo sencillo de Sprint
 

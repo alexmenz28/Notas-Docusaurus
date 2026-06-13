@@ -217,6 +217,6 @@ Ahora en `pedidos` solo quedan atributos que dependen **directamente** de `pedid
 - **Normalizar** para reducir redundancia, mantener consistencia y facilitar actualizaciones. Adecuado para sistemas transaccionales (**OLTP**: *Online Transaction Processing*, procesamiento de transacciones en línea).
 - **Desnormalizar** a propósito (redundar datos, vistas materializadas) cuando priorizas **lecturas muy rápidas** o reportes pesados (**OLAP**: *Online Analytical Processing*, procesamiento analítico en línea) y puedes asumir la lógica de actualización.
 
-## Instalación / puesta en marcha
+## Modelado del esquema y herramientas (opcional)
 
 No hay “instalación” específica; se aplican al **diseño del esquema** en cualquier SGBD relacional (PostgreSQL, SQL Server, MySQL, etc.). Puedes usar herramientas de modelado (pgModeler, MySQL Workbench, DbDiagram) para dibujar y refinar el esquema antes de generar DDL.

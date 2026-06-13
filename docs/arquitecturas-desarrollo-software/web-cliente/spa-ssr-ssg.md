@@ -85,7 +85,9 @@ flowchart LR
   SSG[SSG] --> API
 ```
 
-## Instalación / puesta en marcha
+Muchas apps **SPA** y **SSR** consumen una API en cada vista; en **SSG** el HTML se genera en *build* y a veces no hace falta API en tiempo de lectura (solo para datos dinámicos en el cliente o rutas híbridas).
+
+## Stacks de ejemplo y laboratorio local
 
 Ejemplos típicos:
 

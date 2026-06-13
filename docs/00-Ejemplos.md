@@ -3,6 +3,7 @@ id: ejemplos
 title: Ejemplos de uso
 sidebar_label: Ejemplos
 slug: /00-ejemplos
+sidebar_position: 1
 
 type: guia
 category: ejemplos
@@ -24,7 +25,28 @@ keywords:
 
 Esta página muestra **ejemplos de todo lo que puedes usar** en los archivos Markdown de la biblioteca: encabezados, listas, código, tablas, enlaces, diagramas Mermaid y bloques de nota o advertencia. Úsala como referencia al escribir o editar notas.
 
+La **franja de metadatos** bajo el título se genera a partir del front matter (`type`, `nivel`, `estado`, `tags`, etc.). Para ocultarla en una nota concreta, añade `hide_doc_meta: true` al front matter.
+
+## Cómo titular secciones según el tema
+
+Muchas notas comparten bloques como **Qué es**, **Para qué sirve** y **Cómo se aplica** (o variantes). La última sección **no** tiene que llamarse «Instalación / puesta en marcha» en todos los casos: conviene un `##` que diga **qué hay dentro** (enlaces, herramientas, datos de prueba, ejemplos por stack), no un título plantilla fijo.
+
+Ejemplos de convención en esta biblioteca:
+
+- **Arquitecturas:** enlaces a stacks, tutoriales o Docker → `## Stacks de ejemplo y laboratorio local`.
+- **SQL (DDL, transacciones):** clientes y motor para ejecutar SQL → `## Cliente SQL y motor para practicar`.
+- **Consultas avanzadas:** tablas de ejemplo y scripts → `## Practicar con datos de ejemplo`.
+- **Índices:** sintaxis `CREATE INDEX` por motor → `## Ejemplos de CREATE INDEX por SGBD`.
+- **Diseño de esquemas / ER:** herramientas de dibujo → `## Herramientas de modelado (opcional)`.
+- **Formas normales:** el concepto no se “instala”; suele enlazarse a modelado → `## Modelado del esquema y herramientas (opcional)`.
+- **Fundamentos de BD / NoSQL:** motores para probar en local → `## Probar con un SGBD local (referencia)` o `## Motores NoSQL de ejemplo (opcional)`.
+- **Migraciones:** Flyway, EF, Alembic, etc. → `## Herramientas de migración (referencia)`.
+- **GitHub (empezar):** cuenta, Git y auth → `## Cuenta, Git en local y autenticación`.
+
+Si el tema **no** pide laboratorio (p. ej. solo metodología o teoría), omite esa sección o cierra con enlaces en el cuerpo y, si aplica, **Relación con otras notas** como en otras páginas de GitHub.
+
 ---
+
 
 ## Encabezados y texto
 

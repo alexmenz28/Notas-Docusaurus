@@ -38,12 +38,12 @@ Sirve cuando necesitas **esquemas flexibles**, **escalabilidad horizontal** o un
 
 ## Cómo se reconoce y cómo aplicarla
 
-- **En la práctica:** No hay tablas con JOINs; hay colecciones de documentos, almacenes clave–valor, grafos de nodos y aristas, o columnas por familia. Las consultas usan lenguajes o APIs propias (MongoDB query, Cypher para grafos, comandos Redis, etc.).
+- **En la práctica:** No se modela todo como tablas relacionales con JOINs como en SQL clásico: hay colecciones de documentos, almacenes clave–valor, grafos de nodos y aristas, o familias de columnas. Las consultas usan APIs o lenguajes propios (consultas MongoDB, Cypher en grafos, comandos Redis, etc.). Algunos productos añaden uniones limitadas (p. ej. `$lookup` en MongoDB), pero el diseño habitual sigue siendo distinto al relacional.
 - **Cuándo elegir:** Si tus datos son muy relacionales y necesitas transacciones ACID fuertes y JOINs complejos, suele ganar SQL. Si necesitas caché, documentos flexibles, analytics masivos o grafos de relaciones, valorar el tipo NoSQL adecuado.
 
 ## Tipos principales
 
-- **Documento (MongoDB, Couchbase):** Los datos se almacenan en documentos (por ejemplo JSON/BSON). Buena opción cuando la estructura varía por registro o hay jerarquías anidadas. Consultas por campos y agregaciones; no hay JOINs como en SQL (se modela con referencias o datos embebidos).
+- **Documento (MongoDB, Couchbase):** Los datos se almacenan en documentos (por ejemplo JSON/BSON). Buena opción cuando la estructura varía por registro o hay jerarquías anidadas. Consultas por campos y agregaciones; los JOINs no son el patrón central como en SQL (suele predominar embebido o referencias; MongoDB ofrece `$lookup` cuando hace falta relacionar colecciones).
 - **Clave–valor (Redis, DynamoDB, Memcached):** Asociación clave → valor; muy rápido para caché, sesiones, colas. Redis añade estructuras (listas, sets, hashes) y operaciones atómicas.
 - **Columnar (ClickHouse, Cassandra):** Datos organizados por columnas; muy eficiente para análisis y agregaciones sobre muchas filas y pocas columnas. Típico en analytics y data warehouses.
 - **Grafo (Neo4j, Amazon Neptune):** Nodos y aristas; ideal para relaciones complejas (redes sociales, recomendaciones, grafos de conocimiento). Consultas tipo “camino entre A y B” o “vecinos de N”.
@@ -60,7 +60,7 @@ Sirve cuando necesitas **esquemas flexibles**, **escalabilidad horizontal** o un
 - **Relacional (SQL):** Esquema rígido, integridad referencial, transacciones ACID, JOINs naturales. Mejor para datos muy estructurados y consistencia fuerte.
 - **NoSQL:** Esquema flexible (en doc) o modelo distinto (clave–valor, grafo); escalabilidad horizontal y modelos de consistencia eventual en muchos sistemas. Elegir según requisitos de consistencia, modelo de datos y patrones de acceso.
 
-## Instalación / puesta en marcha
+## Motores NoSQL de ejemplo (opcional)
 
 Ejemplos de stack (solo como referencia; **puedes usar otros**):
 

@@ -26,7 +26,7 @@ keywords:
 
 ## Términos
 
-- **PUDS:** Proceso Unificado de Desarrollo de Software. **RUP:** Rational Unified Process (implementación comercial/formal del proceso unificado). **UML:** Unified Modeling Language, notación para modelos (diagramas de casos de uso, clases, etc.).
+- **PUDS:** Proceso Unificado de Desarrollo de Software. **RUP:** Rational Unified Process (metodología comercial muy ligada al proceso unificado en los años 2000; hoy se usa más como referencia histórica, aunque las ideas de fases e iteraciones siguen siendo útiles). **UML:** Unified Modeling Language, notación para modelos (diagramas de casos de uso, clases, etc.).
 
 ## Qué es
 

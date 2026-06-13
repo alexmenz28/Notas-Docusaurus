@@ -68,7 +68,7 @@ flowchart LR
   S2 --> DB2[(BD B)]
 ```
 
-## Instalación / puesta en marcha
+## Stacks de ejemplo y laboratorio local
 
 Suele implicar elegir tanto **stack de desarrollo** como **plataforma de despliegue**:
 

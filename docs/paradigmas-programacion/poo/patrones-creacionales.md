@@ -38,7 +38,7 @@ Garantiza **una única instancia** de una clase en toda la aplicación y un punt
 
 - **C#:** Instancia estática privada, constructor privado, propiedad/método estático que devuelve la instancia. En entornos con DI suele preferirse registrar el tipo como “single instance” en el contenedor en vez de un Singleton estático.
 - **TypeScript:** Módulo con objeto exportado o clase con instancia estática; en Node el propio módulo ya actúa como singleton al ser cacheado.
-- **Cuándo usarlo:** Loggers, conexiones a BD compartidas, configuración global. Evitar cuando dificulta tests o escalado.
+- **Cuándo usarlo:** Configuración global de solo lectura, *feature flags* estáticos u otros recursos que deban ser únicos en el proceso. **Evitar** para conexiones abiertas a BD: suele ser un antipatrón (mejor pool del driver/ORM). El patrón también dificulta tests y escalado si se abusa del estado global.
 
 ## Factory Method
 

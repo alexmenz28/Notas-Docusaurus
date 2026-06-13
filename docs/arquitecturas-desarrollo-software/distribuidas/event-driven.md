@@ -62,7 +62,7 @@ flowchart LR
   BUS -- Evento --> CONS2[Consumidor B]
 ```
 
-## Instalación / puesta en marcha
+## Stacks de ejemplo y laboratorio local
 
 Depende de la tecnología elegida:
 

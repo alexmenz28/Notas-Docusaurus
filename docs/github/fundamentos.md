@@ -61,7 +61,7 @@ Se reconoce por la interfaz web (github.com), URLs como `github.com/usuario/repo
 - [Issues y proyectos](/docs/github/issues-y-proyectos): issues, labels, milestones, proyectos.
 - [GitHub Actions](/docs/github/github-actions): CI/CD, workflows, automatización.
 
-## Instalación / puesta en marcha
+## Cuenta, Git en local y autenticación
 
 - **Cuenta:** [github.com](https://github.com) — crear cuenta gratuita.
 - **Git (local):** [git-scm.com](https://git-scm.com) — instalar en Windows, Mac o Linux.

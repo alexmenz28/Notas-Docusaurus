@@ -64,7 +64,8 @@ cd repo
 git remote add upstream https://github.com/original/repo.git
 ```
 
-**Sincronizar con upstream:**
+**Sincronizar con upstream** (usa el nombre de la rama principal de ese repo, suele ser `main` o `master`):
+
 ```bash
 git fetch upstream
 git checkout main

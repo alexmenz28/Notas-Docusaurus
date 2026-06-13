@@ -22,7 +22,7 @@ keywords:
 
 ## Qué es
 
-C# es un lenguaje **orientado a objetos** con clases, herencia, interfaces, clases abstractas, propiedades, eventos y genéricos. Todo el código vive en tipos (clases, structs, interfaces, enums); la visibilidad se controla con modificadores (`public`, `private`, `protected`, `internal`).
+C# es un lenguaje **orientado a objetos** con clases, herencia, interfaces, clases abstractas, propiedades, eventos y genéricos. En el modelo habitual de bibliotecas y servicios, casi todo el código vive en **tipos** (clases, structs, interfaces, enums); la visibilidad se controla con modificadores (`public`, `private`, `protected`, `internal`). En el punto de entrada también puedes usar *top-level statements* (C# 9+) sin envolver el `Main` en una clase explícita.
 
 ## Para qué sirve
 

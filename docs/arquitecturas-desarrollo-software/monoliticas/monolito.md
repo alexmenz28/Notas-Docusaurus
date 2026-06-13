@@ -68,7 +68,7 @@ flowchart LR
   APP --> DB[(Base de datos)]
 ```
 
-## Instalación / puesta en marcha
+## Stacks de ejemplo y laboratorio local
 
 Depende de la tecnología, pero típicamente:
 

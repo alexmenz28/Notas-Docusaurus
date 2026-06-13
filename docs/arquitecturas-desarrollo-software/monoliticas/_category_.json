@@ -1,0 +1,8 @@
+{
+  "label": "Monolíticas",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Monolito clásico y monolito modular."
+  }
+}

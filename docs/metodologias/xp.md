@@ -74,28 +74,27 @@ Una visión simple del ciclo de vida de un equipo que aplica XP podría verse as
    - El equipo estima el esfuerzo (habitualmente con story points).
    - Se define el primer release y las iteraciones iniciales.
 3. **Iteraciones (Iterations to Release)**
-   - Selección de historias
-   - Diseño simple
-   - Programación en parejas
-   - Desarrollo guiado por pruebas (TDD)
-   - Integración continua
-   - Refactorización constante
+   - Selección de historias.
+   - Diseño simple.
+   - Programación en parejas.
+   - Desarrollo guiado por pruebas (TDD).
+   - Integración continua.
+   - Refactorización constante.
 4. **Producción (Production phase)**
-   - Se estabiliza el sistema
-   - Se corrigen errores
-   - Se prepara el software para producción
+   - Se estabiliza el sistema.
+   - Se corrigen errores.
    - Se prepara el software para producción.
-   - Se realizan pruebas adicionales (aceptaión, rendimiento, etc.)
+   - Se realizan pruebas adicionales (aceptación, rendimiento, etc.).
    **Resultado:** versión del producto lista para entregar.
 5. **Mantenimiento (Maintenance phase)**
-   - Se siguen agregando nuevas historias
-   - Se realizan correciones
-   - Se ejecutan nuevas iteraciones de mantinimiento
+   - Se siguen agregando nuevas historias.
+   - Se realizan correcciones.
+   - Se ejecutan nuevas iteraciones de mantenimiento.
 6. **Finalización (Death phase)**
-   - Ya no se encuentran historias significativas
-   - El cliente decide cerrar el desarrollo
-   - El costo de seguir agregando funciones es mayor que el beneficio
-   Se realiza una entrega final y documentación esencial.
+   - Ya no se encuentran historias significativas.
+   - El cliente decide cerrar el desarrollo.
+   - El coste de seguir agregando funciones es mayor que el beneficio.
+   - Se realiza una entrega final y documentación esencial.
 
 ## Ejemplo sencillo de TDD
 

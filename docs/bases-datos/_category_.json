@@ -1,0 +1,8 @@
+{
+  "label": "Bases de datos",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Modelo relacional, diseño, SQL, índices, NoSQL y migraciones."
+  }
+}

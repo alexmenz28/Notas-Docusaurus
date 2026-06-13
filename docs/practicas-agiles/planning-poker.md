@@ -33,7 +33,7 @@ Sirve para **llegar a una estimación compartida** sin que una sola persona arra
 
 ## Cómo se aplica
 
-Se usa típicamente en la **planificación de sprint** o en sesiones de refinamiento: el facilitador presenta la historia, el equipo vota en secreto con cartas, se muestran a la vez y si hay dispersión se discute (quien dio más bajo y más alto explican) y se repite hasta consenso. Las estimaciones suelen ser en puntos (1, 2, 3, 5, 8, 13…) para no confundir con horas. Pasos básicos:
+Se usa típicamente en la **planificación de sprint** o en sesiones de refinamiento: el facilitador presenta la historia, el equipo vota en secreto con cartas, se muestran a la vez y si hay dispersión se discute (quien dio más bajo y más alto explican) y se repite hasta consenso. Las estimaciones suelen ser en puntos (1, 2, 3, 5, 8, 13…) para no confundir con horas.
 
 ## Pasos básicos
 

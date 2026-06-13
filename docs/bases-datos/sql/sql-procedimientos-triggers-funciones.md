@@ -66,7 +66,7 @@ AS $$
 BEGIN
   UPDATE pedidos SET estado = 'cerrado', actualizado_en = NOW() WHERE id = p_pedido_id;
   -- Más lógica: mover a historial, notificar, etc.
-  COMMIT;
+  -- El COMMIT lo suele hacer quien llama a CALL; solo en procedimientos avanzados (p. ej. PostgreSQL 11+) tiene sentido COMMIT explícito dentro del cuerpo.
 END;
 $$;
 
@@ -155,7 +155,7 @@ $$;
 
 CREATE TRIGGER tr_auditar_pedido
   AFTER INSERT OR UPDATE OR DELETE ON pedidos
-  FOR EACH ROW EXECUTE FUNCTION fn_auditar_pedido();
+  FOR EACH ROW EXECUTE PROCEDURE fn_auditar_pedido();
 ```
 
 - `TG_OP` indica la operación (INSERT, UPDATE, DELETE). `NEW` y `OLD` son las filas nueva y antigua (en UPDATE/DELETE).

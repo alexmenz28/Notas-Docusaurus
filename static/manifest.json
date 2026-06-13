@@ -1,0 +1,24 @@
+{
+  "name": "Biblioteca",
+  "short_name": "Biblioteca",
+  "description": "Notas personales de aprendizaje en desarrollo de software",
+  "theme_color": "#2e8555",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "img/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "img/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -50,19 +50,16 @@ En SQL abres con BEGIN (o START TRANSACTION), ejecutas las sentencias que forman
 - **COMMIT:** Confirma los cambios; la transacción termina con éxito.
 - **ROLLBACK:** Deshace todos los cambios de la transacción actual; la transacción termina sin aplicar nada.
 
-**Ejemplo (pseudocódigo estándar):**
+**Ejemplo (todo correcto → confirmar):**
 
 ```sql
 BEGIN;
   UPDATE cuentas SET saldo = saldo - 100 WHERE id = 1;
   UPDATE cuentas SET saldo = saldo + 100 WHERE id = 2;
-  -- Si todo va bien:
 COMMIT;
-  -- Si hay error:
-  -- ROLLBACK;
 ```
 
-En muchos entornos (aplicaciones, ORMs) el “BEGIN” es implícito al ejecutar la primera sentencia y el COMMIT/ROLLBACK lo gestiona el código o el framework.
+Si **falla** alguna sentencia o la regla de negocio no se cumple, no ejecutes `COMMIT`: ejecuta `ROLLBACK` (o deja que el driver/ORM aborte la transacción) para deshacer todo el bloque.
 
 ## Niveles de aislamiento
 
@@ -70,7 +67,7 @@ El **nivel de aislamiento** define qué fenómenos de concurrencia se evitan (le
 
 - **READ UNCOMMITTED:** Mínimo aislamiento; pueden verse cambios no confirmados (lecturas sucias). Raramente recomendable.
 - **READ COMMITTED:** Solo se ven datos ya confirmados; puede haber lecturas no repetibles entre dos SELECT en la misma transacción.
-- **REPEATABLE READ:** Dentro de la transacción las lecturas se repiten; puede haber fenómenos “fantasma” (nuevas filas que aparecen).
+- **REPEATABLE READ:** Evita lecturas no repetibles en muchos motores; las **filas fantasmas** dependen de cómo lo implemente cada SGBD (p. ej. PostgreSQL usa una instantánea *snapshot* y evita más anomalías de las que exige el estándar mínimo; MySQL InnoDB mitiga fantasmas con bloqueos de rango *next-key*).
 - **SERIALIZABLE:** Máximo aislamiento; la transacción se comporta como si fuera la única. Más segura pero más propensa a bloqueos y reintentos.
 
 Por defecto, PostgreSQL y SQL Server suelen usar READ COMMITTED; MySQL InnoDB usa REPEATABLE READ por defecto. Subir el nivel reduce anomalías pero puede aumentar contención.
@@ -82,7 +79,7 @@ Por defecto, PostgreSQL y SQL Server suelen usar READ COMMITTED; MySQL InnoDB us
 - No hacer lógica pesada ni llamadas externas dentro de la transacción; solo operaciones de BD.
 - Entender el nivel de aislamiento por defecto de tu SGBD y subirlo solo cuando lo necesites (y asumir el coste).
 
-## Instalación / puesta en marcha
+## Cliente SQL y motor para practicar
 
 Las transacciones son parte del estándar SQL y están en todos los SGBD relacionales. La sintaxis exacta puede variar (por ejemplo `BEGIN` vs `START TRANSACTION`, manejo de savepoints). Consulta la documentación de tu motor:
 

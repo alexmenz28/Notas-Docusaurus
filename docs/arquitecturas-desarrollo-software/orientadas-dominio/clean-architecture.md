@@ -62,7 +62,7 @@ flowchart TB
   ADAPTADORES --> INFRA[Infraestructura (BD, APIs externas)]
 ```
 
-## Instalación / puesta en marcha
+## Stacks de ejemplo y laboratorio local
 
 Referencias y guías prácticas:
 

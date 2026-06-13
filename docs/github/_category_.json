@@ -1,0 +1,8 @@
+{
+  "label": "GitHub",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Repositorios, ramas, pull requests, issues y Actions."
+  }
+}

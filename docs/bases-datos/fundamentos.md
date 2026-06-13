@@ -32,7 +32,7 @@ Sirve para **persistir datos** de forma fiable y compartida: varios usuarios o a
 
 ## Cómo se reconoce y cómo aplicarla
 
-- **En la práctica:** Te conectas al SGBD (cliente, conexión desde código o ORM); creas y modificas tablas (DDL); insertas, actualizas, borras y consultas datos (DML). Los datos viven en el servidor del SGBD, no solo en memoria.
+- **En la práctica:** Te conectas al SGBD (cliente, conexión desde código o ORM); creas y modificas tablas (DDL); insertas, actualizas, borras y consultas datos (DML). Los datos persisten en el motor del SGBD (en motores cliente/servidor suele ser un proceso en un servidor; en **SQLite** el motor suele ir enlazado a tu propia aplicación y el archivo `.db` es la base).
 - **En el código:** Drivers o ORMs (Entity Framework, TypeORM, Prisma, etc.) que abren conexión, ejecutan SQL o operaciones de alto nivel y cierran recursos. Las consultas y transacciones se hacen contra una “base de datos” configurada por entorno.
 
 ## Términos clave
@@ -61,7 +61,7 @@ El **modelo relacional** (Codd) representa los datos como relaciones (tablas) ma
 - Cuando varios usuarios o procesos deben **compartir** y actualizar los mismos datos con consistencia.
 - Cuando el volumen de datos o las consultas requieren **índices**, transacciones y capacidades que un SGBD ofrece.
 
-## Instalación / puesta en marcha
+## Probar con un SGBD local (referencia)
 
 Ejemplos de stack (solo como referencia; **puedes usar otros**):
 

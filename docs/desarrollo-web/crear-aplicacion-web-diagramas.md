@@ -40,12 +40,12 @@ flowchart TB
     API_Concepto["Concepto de API<br/>Contrato de endpoints"]
   end
 
-  subgraph FRONTEND[" Frontend "]
+  subgraph FRONTEND[" Capa cliente (frontend) "]
     UI["Interfaz de usuario<br/>Lo que ve y usa la persona"]
     Navegador["Navegador<br/>Donde se ejecuta el frontend"]
   end
 
-  subgraph BACKEND[" Backend "]
+  subgraph BACKEND[" Servidor (backend) "]
     Logica["Lógica de negocio<br/>Reglas, validaciones, cálculos"]
     Endpoints["Endpoints / API<br/>Rutas que expone el servidor"]
   end
@@ -92,7 +92,7 @@ flowchart TB
 
 ## 2. Frontend — Herramientas y relaciones
 
-Detalle de **librerías, frameworks y herramientas** en frontend: base, frameworks de UI, meta-frameworks, estilos, estado/datos en cliente y herramientas de build.
+Detalle de **librerías, frameworks y herramientas** en frontend: base, frameworks de UI, metaframeworks, estilos, estado/datos en cliente y herramientas de **compilación** (*build*).
 
 ```mermaid
 flowchart LR
@@ -102,15 +102,15 @@ flowchart LR
     JS["JS/TypeScript<br/>Lógica e interactividad"]
   end
 
-  subgraph UI[" Frameworks / librerías de UI "]
-    React["React<br/>Componentes, virtual DOM"]
-    Vue["Vue<br/>Reactividad, templates"]
-    Svelte["Svelte<br/>Compilador, sin runtime pesado"]
-    Angular["Angular<br/>Framework completo"]
+  subgraph UI[" Marcos UI (librerías) "]
+    React["React<br/>Componentes, DOM virtual"]
+    Vue["Vue<br/>Reactividad, plantillas"]
+    Svelte["Svelte<br/>Compilador, poco runtime en cliente"]
+    Angular["Angular<br/>Marco completo"]
     Solid["Solid.js<br/>Reactivo por señales"]
   end
 
-  subgraph META[" Meta-frameworks "]
+  subgraph META[" Metaframeworks "]
     Next["Next.js<br/>React + SSR/SSG + rutas"]
     Nuxt["Nuxt<br/>Vue + SSR/SSG + rutas"]
     SvelteKit["SvelteKit<br/>Svelte + SSR + rutas"]
@@ -131,9 +131,9 @@ flowchart LR
     Zustand["Zustand<br/>Estado global (React)"]
   end
 
-  subgraph BUILD[" Build y paquetes "]
-    Vite["Vite<br/>Build rápido, ESM"]
-    Webpack["Webpack<br/>Bundler clásico"]
+  subgraph BUILD[" Compilación y paquetes "]
+    Vite["Vite<br/>Compilación rápida, ESM"]
+    Webpack["Webpack<br/>Empaquetador clásico"]
     npm["npm/pnpm/yarn<br/>Gestión de dependencias"]
   end
 
@@ -177,21 +177,21 @@ flowchart LR
 
 ## 3. Backend — Lenguajes, frameworks y tipos de API
 
-Lenguajes y runtimes, frameworks backend que se usan con cada uno, y estilos de API que suelen exponer (REST, GraphQL, tRPC).
+Lenguajes y *runtimes* en servidor, frameworks del backend que se usan con cada uno, y estilos de API que suelen exponer (REST, GraphQL, tRPC).
 
 ```mermaid
 flowchart TB
-  subgraph LENGUAJES[" Lenguajes / runtimes "]
+  subgraph LENGUAJES[" Lenguajes / runtime en servidor "]
     Node["Node.js<br/>JavaScript en servidor"]
     Python["Python<br/>Interpretado, ecosistema amplio"]
     CSharp["C#<br/>.NET, tipado fuerte"]
     Go["Go<br/>Compilado, concurrencia"]
-    Java["Java<br/>JVM, enterprise"]
-    PHP["PHP<br/>Oriented a web"]
+    Java["Java<br/>JVM, entornos empresariales"]
+    PHP["PHP<br/>Orientado a web"]
     Ruby["Ruby<br/>Convención sobre configuración"]
   end
 
-  subgraph FRAMEWORKS[" Frameworks backend "]
+  subgraph FRAMEWORKS[" Frameworks de servidor "]
     Express["Express<br/>Minimalista, Node"]
     Fastify["Fastify<br/>Rápido, Node"]
     Nest["Nest.js<br/>Estructurado, TypeScript"]
@@ -207,7 +207,7 @@ flowchart TB
   subgraph API[" Estilo de API "]
     REST["REST JSON<br/>URLs + métodos HTTP"]
     GraphQL["GraphQL<br/>Un endpoint, consultas"]
-    tRPC["tRPC<br/>Tipado end-to-end, TS"]
+    tRPC["tRPC<br/>Tipado de punta a punta, TS"]
   end
 
   Node --> Express
@@ -255,7 +255,7 @@ flowchart TB
 | **Gin / Echo** | Frameworks ligeros para Go; ideales para APIs REST. |
 | **REST JSON** | Estilo de API: recursos como URLs, métodos HTTP (GET, POST, PUT, DELETE), cuerpo en JSON. |
 | **GraphQL** | Lenguaje de consulta: un endpoint, el cliente pide exactamente los campos que necesita. |
-| **tRPC** | API tipo RPC con tipado end-to-end en TypeScript; sin código generado, sin OpenAPI. |
+| **tRPC** | API tipo RPC con tipado **de punta a punta** en TypeScript; sin código generado, sin OpenAPI. |
 
 ---
 
@@ -265,7 +265,7 @@ Bases de datos (relacionales, documentales, caché), ORMs y clientes que usa el 
 
 ```mermaid
 flowchart TB
-  subgraph BACKEND_CONTEXT[" Backend (lenguaje) "]
+  subgraph BACKEND_CONTEXT[" Servidor (lenguaje) "]
     NodeB["Node / TypeScript"]
     PythonB["Python"]
     CSharpB["C#"]
@@ -287,10 +287,10 @@ flowchart TB
   end
 
   subgraph ORM_JS[" ORM / acceso (JS/TS) "]
-    Prisma["Prisma<br/>Schema, migraciones, tipo seguro"]
+    Prisma["Prisma<br/>Esquema, migraciones, tipado seguro"]
     TypeORM["TypeORM<br/>Decoradores, TypeScript"]
     Sequelize["Sequelize<br/>Clásico en Node"]
-    Drizzle["Drizzle<br/>Ligero, SQL-like"]
+    Drizzle["Drizzle<br/>Ligero, estilo SQL"]
   end
 
   subgraph ORM_OTROS[" ORM / acceso (otros lenguajes) "]
@@ -336,25 +336,25 @@ flowchart TB
 
 ---
 
-## 5. Despliegue — Hosting y pipeline
+## 5. Despliegue — Alojamiento y *pipeline*
 
-Build del frontend, opciones de hosting para frontend estático y para backend, y herramientas de infra (contenedores, CI/CD).
+**Compilación** del frontend, opciones de **alojamiento** para frontend estático y para backend, y herramientas de infra (contenedores, CI/CD).
 
 ```mermaid
 flowchart LR
-  subgraph FRONTEND_BUILD[" Build frontend "]
+  subgraph FRONTEND_BUILD[" Compilación del frontend "]
     ViteB["Vite / Webpack<br/>Empaqueta el proyecto"]
     Static["HTML, JS, CSS<br/>Archivos estáticos"]
   end
 
-  subgraph HOSTING_FRONT[" Hosting frontend estático "]
-    VercelF["Vercel<br/>Deploy desde Git, CDN"]
+  subgraph HOSTING_FRONT[" Alojamiento frontend estático "]
+    VercelF["Vercel<br/>Despliegue desde Git, CDN"]
     NetlifyF["Netlify<br/>Estático + funciones"]
     Cloudflare["Cloudflare Pages<br/>CDN global"]
     S3["S3 + CloudFront<br/>AWS, estático"]
   end
 
-  subgraph HOSTING_BACK[" Hosting backend / full-stack "]
+  subgraph HOSTING_BACK[" Alojamiento backend / full-stack "]
     VercelB["Vercel Serverless<br/>Funciones por ruta"]
     Railway["Railway<br/>Contenedores, BD"]
     Render["Render<br/>Servicios y BD gestionadas"]
@@ -371,7 +371,7 @@ flowchart LR
 
   ViteB --> Static
   Static --> HOSTING_FRONT
-  BACKEND["Backend"] --> HOSTING_BACK
+  BACKEND_NODE["Servidor"] --> HOSTING_BACK
   Docker --> HOSTING_BACK
   Docker --> VPS
   GitHubA --> HOSTING_FRONT
@@ -384,8 +384,8 @@ flowchart LR
 
 | Elemento | Qué es |
 |----------|--------|
-| **Vite / Webpack (build)** | Herramientas que compilan el proyecto frontend (TS, JSX, CSS) en archivos listos para producción. |
-| **Archivos estáticos** | HTML, JS y CSS resultantes del build; se sirven tal cual desde un servidor o CDN. |
+| **Vite / Webpack (compilación)** | Herramientas que compilan el proyecto frontend (TS, JSX, CSS) en archivos listos para producción. |
+| **Archivos estáticos** | HTML, JS y CSS resultantes de la compilación; se sirven tal cual desde un servidor o CDN. |
 | **Vercel** | Plataforma de despliegue: conectas el repo, hace build y despliega; soporta Next.js, funciones serverless y CDN. |
 | **Netlify** | Similar a Vercel: estático desde Git, funciones serverless, formularios, split testing. |
 | **Cloudflare Pages** | Hosting estático en la red de Cloudflare; deploy desde Git, sin coste para proyectos pequeños. |
@@ -397,14 +397,14 @@ flowchart LR
 | **VPS** | Servidor virtual (DigitalOcean, Linode, etc.): tienes control total, tú instalas y mantienes todo. |
 | **AWS / GCP / Azure** | Proveedores de cloud: máquinas, bases de datos, colas, almacenamiento, etc. |
 | **Docker** | Contenedores: empaquetas la app y sus dependencias en una imagen que corre igual en cualquier sitio. |
-| **GitHub Actions** | Automatización en GitHub: al hacer push puedes ejecutar tests, build y desplegar. |
+| **GitHub Actions** | Automatización en GitHub: al hacer *push* puedes ejecutar pruebas, **compilación** y despliegue. |
 | **GitLab CI** | Pipeline de integración y despliegue en GitLab; definido en un archivo en el repo. |
 
 ---
 
 ## 6. Vista integrada — De frontend a datos
 
-Un único diagrama que recorre **navegador → frontend → API → backend → ORM/BD** con ejemplos concretos de tecnologías.
+Un único diagrama que recorre **navegador → cliente → API → servidor → ORM/BD** con ejemplos concretos de tecnologías.
 
 ```mermaid
 flowchart TB
@@ -412,20 +412,20 @@ flowchart TB
     Nav["Navegador<br/>Chrome, Firefox, Safari…"]
   end
 
-  subgraph FRONT[" Frontend (ejemplos de stack) "]
-    NextJS["Next.js / React<br/>Meta-framework + UI"]
-    VueNuxt["Vue / Nuxt<br/>Framework + meta"]
-    ViteReact["Vite + React<br/>Build + UI"]
+  subgraph FRONT[" Cliente (ejemplos de stack) "]
+    NextJS["Next.js / React<br/>Metaframework + UI"]
+    VueNuxt["Vue / Nuxt<br/>Marco + meta"]
+    ViteReact["Vite + React<br/>Compilación + UI"]
   end
 
   subgraph API_LAYER[" Capa API (contrato) "]
-    REST_API["REST / JSON<br/>Endpoints por recurso"]
-    GQL["GraphQL<br/>Un endpoint, consultas"]
+    REST_API["REST / JSON<br/>Rutas por recurso"]
+    GQL["GraphQL<br/>Un solo punto de entrada, consultas"]
   end
 
-  subgraph SERVER[" Backend (ejemplos) "]
+  subgraph SERVER[" Servidor (ejemplos) "]
     ExpressN["Express / Node<br/>Minimalista"]
-    FastAPIN["FastAPI / Python<br/>Moderno, async"]
+    FastAPIN["FastAPI / Python<br/>Moderno, asíncrono"]
     NestN["Nest.js<br/>Estructurado, TS"]
   end
 

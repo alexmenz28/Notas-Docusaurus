@@ -62,7 +62,7 @@ flowchart TB
   DATOS --> BD[(Base de datos)]
 ```
 
-## Instalación / puesta en marcha
+## Stacks de ejemplo y laboratorio local
 
 Ejemplos de stack (solo como referencia; **puedes usar otros**):
 

@@ -66,7 +66,7 @@ Sirve para **traducir el dominio** (usuarios, pedidos, productos, etc.) en una e
 - FKs y restricciones para garantizar integridad; índices en columnas usadas en JOINs y filtros.
 - Evitar columnas con muchos NULLs o “tablas anchísimas”; valorar partición o descomposición.
 
-## Instalación / puesta en marcha
+## Herramientas de modelado (opcional)
 
 Ejemplos de herramientas (solo como referencia; **puedes usar otras**):
 

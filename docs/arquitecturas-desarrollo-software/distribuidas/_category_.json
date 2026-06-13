@@ -1,0 +1,8 @@
+{
+  "label": "Distribuidas",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Microservicios, event-driven, CQRS y event sourcing."
+  }
+}

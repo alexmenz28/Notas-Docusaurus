@@ -1,0 +1,8 @@
+{
+  "label": "Web y cliente",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "SPA, SSR, SSG y micro frontends."
+  }
+}
